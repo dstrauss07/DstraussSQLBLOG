@@ -1,0 +1,20 @@
+﻿@model StraussDA.BlogLib.Post
+
+@{
+    ViewData["Title"] = "Edit Post";
+    ViewData["Action"] = "Edit";
+}
+
+
+<h4>Post</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+            @Html.Partial("_editPost", Model, ViewData);
+</div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

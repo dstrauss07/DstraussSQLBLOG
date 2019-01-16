@@ -1,0 +1,25 @@
+﻿@model StraussDA.BlogLib.Post
+
+@{
+    ViewData["Title"] = "Create Post";
+    ViewData["Action"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Post</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @Html.Partial("_editPost", Model, ViewData );
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
