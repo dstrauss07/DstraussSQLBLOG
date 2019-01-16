@@ -39,12 +39,15 @@ namespace BlogWebsite
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<BlogDbContext>(options =>
+         options.UseSqlServer(
+             Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddScoped<IPostRepository, PostRepositoryMemory>();
+            services.AddScoped<IPostRepository, PostRepositoryEF>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
