@@ -29,7 +29,7 @@ namespace StraussDA.BlogLib
             var OrigPost = GetByID(editedPost.Id);
             OrigPost.PostCategory = editedPost.PostCategory;
             OrigPost.PostContent = editedPost.PostContent;
-            OrigPost.ModifyDate = editedPost.ModifyDate;
+            OrigPost.ModifyDate = DateTime.Now;
             OrigPost.PostName = editedPost.PostName;
             OrigPost.PostTags = editedPost.PostTags;
             _postContext.SaveChanges();
@@ -37,7 +37,10 @@ namespace StraussDA.BlogLib
 
         public void NewPost(Post NewPost)
         {
+            NewPost.PostDate = DateTime.Now;
+            NewPost.ModifyDate = DateTime.Now;
             _postContext.Add(NewPost);
+            
             _postContext.SaveChanges();
         }
 
