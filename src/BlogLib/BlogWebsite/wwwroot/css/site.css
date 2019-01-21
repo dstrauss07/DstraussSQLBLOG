@@ -56,6 +56,16 @@ body {
 }
 
 .createArea {
-    min-height:500px;
+    padding:1%;
     background-color:blue;
+    align-content:center;
+    justify-content:center;
+}
+
+.divideline{
+    width:100%;
+    height:2rem;
+    padding:.5rem;
+    background-color:red;
+    margin: 2.5rem 0;
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StraussDA.BlogLib;
 
+
 namespace BlogWebsite.Controllers
 {
     public class PostController : Controller
@@ -18,6 +19,7 @@ namespace BlogWebsite.Controllers
         }
         public ActionResult Index()
         {
+
             return View(_postRepo.ListAll());
         }
 
