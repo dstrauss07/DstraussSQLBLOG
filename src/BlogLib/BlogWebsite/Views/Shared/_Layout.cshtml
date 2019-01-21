@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<StraussDA.BlogLib.Post>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,13 +18,14 @@
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="https://cloud.tinymce.com/5-testing/tinymce.min.js"></script>
-    <script>tinymce.init({
-    autoresize_min_height: 500,
-        mode: "specific_textareas",
-        editor_selector: "editorHtml",
-     plugins: "autoresize",
-    
-    });</script>
+    <script>
+    tinymce.init({
+            autoresize_min_height: 500,
+            mode: "specific_textareas",
+            editor_selector: "editorHtml",
+            plugins: "autoresize",
+
+        });</script>
 </head>
 <body>
     <header>
@@ -93,130 +95,167 @@
                 <div class="row no-gutters ">
                     <div class="col-1 "> </div>
                     <div class="col-4 ">
-                        <h4 class="pl-4 submenuhead ">ign entertainment</h4>
+                        <h4 class="pl-4 submenuhead ">Recent Articles</h4>
                         <div class="row ">
-                            <div class="col ">
+                            <ul class="col ">
                                 <ul class="list-unstyled ">
-                                    <li>
-                                        <a class="nav-link " href="# ">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Accessibility</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Advertise</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Ad Choices</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Content Team</a>
-                                    </li>
-                                </ul>
+                                    <@foreach (var item in Model)
+                                    {
+                                        int maxLeft = 8;
+                                        if (maxLeft > 4)
+                                        {<li> <a class="nav-link " href="# ">@Html.DisplayFor(modelItem => item.PostName)</a></li>
 
-                            </div>
+                                           @
+                                    { maxLeft--;
+                                    }
+                                    if (maxLeft == 4)
+                                    {
+
+
+                            <ul class="col ">
+                                <ul class="list-unstyled ">
+                                    <li> <a class="nav-link " href="# ">@Html.DisplayFor(modelItem => item.PostName)</a></li>
+
+                                    maxLeft--;
+                                    }
+                                </ul>
+                            </ul>}
+                        maxLeft--;}
+                        if (maxLeft > 0)
+                        {
+                                      <@foreach (var item in Model)
+                                      { 
+                            <ul class="col ">
+                                <ul class="list-unstyled ">
+                                    <li> <a class="nav-link " href="# ">@Html.DisplayFor(modelItem => item.PostName)</a></li>
+
+                                    maxLeft--;
+                                    }
+                                </ul>
+                            </ul>}
+                                        if (maxLeft == 0)
+                                        {
+                                            </ul> </ul>
+                                        }
+                                    }
+                         
+                        <ul class="col ">
+                            <ul class="list-unstyled ">
+
+                                }
+                                else
+                                {
+                                return;
+                                }
+                                }
+
+
+                                <div class="col ">
+                                    <ul class="list-unstyled "></ul>
+                                </div>
+                        </div>
                             <div class="col ">
                                 <ul class="list-unstyled ">
-                                    <li>
-                                        <a class="nav-link " href="# ">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Accessibility</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Advertise</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Ad Choices</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Content Team</a>
-                                    </li>
-                                </ul>
+                                    <@foreach (var item in Model)
+                                    {
+                                        int maxLeft = 4;
+                                        if (maxLeft > 0)
+                                        {<li> <a class="nav-link " href="# ">@Html.DisplayFor(modelItem => item.PostName)</a></li>
+
+                                            maxLeft--;
+                                        }
+                                        if (maxLeft==0)
+                                        {
+                                            return;
+                                        }
+                                    }
+                                    </div>
+
+                            <div class="col ">
+                                <ul class="list-unstyled "></ul>
                             </div>
+                            </div>
+
+                            @*  <div class="form-group ">
+        <label for="select-country ">Select Your Region</label>
+        <select class="form-control " id="select-country ">
+            <option>UK</option>
+            <option>USA</option>
+            <option>Brazil</option>
+            <option>South Africa</option>
+        </select>
+                            *@
                         </div>
-                        <div class="form-group ">
-                            <label for="select-country ">Select Your Region</label>
-                            <select class="form-control " id="select-country ">
-                                <option>UK</option>
-                                <option>USA</option>
-                                <option>Brazil</option>
-                                <option>South Africa</option>
-                            </select>
-                        </div>
+       
+
+
+                    <div class="col ">
+                        <h4 class="submenuhead ">heading 2</h4>
+                        <ul class="list-unstyled ">
+                            <li>
+                                <a class="nav-link " href="# ">About Us</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Accessibility</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Advertise</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Ad Choices</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Content Team</a>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="col-1 " style="border-left:1px solid #000;height:300px "></div>
-                    <div class="col-5 ">
-                        <div class="row ">
-                            <div class="col ">
-                                <h4 class="submenuhead ">heading 1</h4>
-                                <ul class="list-unstyled ">
-                                    <li>
-                                        <a class="nav-link " href="# ">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Accessibility</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Advertise</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Ad Choices</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Content Team</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <div class="col ">
-                                <h4 class="submenuhead ">heading 2</h4>
-                                <ul class="list-unstyled ">
-                                    <li>
-                                        <a class="nav-link " href="# ">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Accessibility</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Advertise</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Ad Choices</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Content Team</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col ">
-                                <ul class="list-unstyled ">
-                                    <h4 class="submenuhead ">heading 3</h4>
-                                    <li>
-                                        <a class="nav-link" href="#">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Accessibility</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Advertise</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Ad Choices</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link " href="# ">Content Team</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="col ">
+                        <h4 class="submenuhead ">heading 2</h4>
+                        <ul class="list-unstyled ">
+                            <li>
+                                <a class="nav-link " href="# ">About Us</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Accessibility</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Advertise</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Ad Choices</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Content Team</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-1 ">
+                    <div class="col ">
+                        <ul class="list-unstyled ">
+                            <h4 class="submenuhead ">heading 3</h4>
+                            <li>
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Accessibility</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Advertise</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Ad Choices</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="# ">Content Team</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+                        </div>
+                        <div class="col-1 ">
+                        </div>
+                    </div>
+                </div>
+         
 
 
     </header>
