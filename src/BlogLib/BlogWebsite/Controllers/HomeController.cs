@@ -5,14 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BlogWebsite.Models;
+using StraussDA.BlogLib;
 
 namespace BlogWebsite.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IPostRepository _postRepo;
+        public HomeController(IPostRepository postRepository)
+        {
+            _postRepo = postRepository;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            
+            return View(_postRepo.ListAll());
         }
 
         public IActionResult Privacy()

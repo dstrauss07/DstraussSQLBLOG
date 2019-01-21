@@ -9,6 +9,11 @@ namespace StraussDA.BlogLib
     {
         private readonly BlogDbContext _postContext;
 
+        public void GetRawPostString(int id)
+        {
+            string rawHtml = GetByID(id).PostContent;
+                 }
+
         public PostRepositoryEF(BlogDbContext dbContext)
         {
             _postContext = dbContext;
@@ -20,14 +25,14 @@ namespace StraussDA.BlogLib
 
         public Post GetByID(int id)
         {
-            return _postContext.Post
+             return _postContext.Post
                 .Single(b => b.Id == id);
+            
         }
 
         public void EditPost(Post editedPost)
         {
             var OrigPost = GetByID(editedPost.Id);
-            OrigPost.PostCategory = editedPost.PostCategory;
             OrigPost.PostContent = editedPost.PostContent;
             OrigPost.ModifyDate = DateTime.Now;
             OrigPost.PostName = editedPost.PostName;

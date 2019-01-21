@@ -8,6 +8,10 @@ namespace StraussDA.BlogLib
     {
         public static List<Post> _posts;
         public static int _nextId = 1;
+        public void GetRawPostString(int id)
+        {
+            string rawHtml = GetByID(id).PostContent;
+        }
         public PostRepositoryMemory()
         {
             if(_posts == null)
@@ -22,13 +26,13 @@ namespace StraussDA.BlogLib
 
         public Post GetByID(int id)
         {
+            GetRawPostString(id);
             return _posts.Find(b => b.Id == id);
         }
 
         public void EditPost(Post editedPost)
         {
             var OrigPost = GetByID(editedPost.Id);
-            OrigPost.PostCategory = editedPost.PostCategory;
             OrigPost.PostContent = editedPost.PostContent;
             OrigPost.ModifyDate = editedPost.ModifyDate;
             OrigPost.PostName = editedPost.PostName;

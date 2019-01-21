@@ -26,6 +26,7 @@ namespace BlogWebsite.Controllers
         // GET: Post/Details/5
         public ActionResult Details(int id)
         {
+
             return View(_postRepo.GetByID(id));
         }
 

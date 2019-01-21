@@ -1,8 +1,18 @@
-﻿@{
+﻿@model IEnumerable<StraussDA.BlogLib.Post>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    <aside class="col-md-4 col-lg-3 p-3 text-center">
+        <img class="img-fluid mx-auto" src="image/dave.jpg">
+    </aside>
+    <main class="col-md-8 col-lg-9 bg-danger p-5" id="article-area">
+        @foreach (var item in Model)
+        {
+            @Html.Raw(item.PostContent);
+            <hr class="bg-light">
+        }
+
+    </main>
 </div>
