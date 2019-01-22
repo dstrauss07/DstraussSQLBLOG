@@ -8,18 +8,19 @@
         <img class="img-fluid mx-auto" src="image/dave.jpg">
     </aside>
     <main class="col-md-8 col-lg-9 p-5" id="article-area">
+       
         @foreach (var item in Model)
-        {
-            int bgAlt = 0;
-            if (bgAlt == 0) 
-            {
-                <div class="bg-success">@Html.Raw(item.PostContent);</div>;
+                    {
+                        int bgAlt = 0;
+                        if (bgAlt == 0)
+                        {
+                <div class="bg-success">@Html.Raw(item.PostContent)</div>;
                 bgAlt++;
-            }
+               }
             if (bgAlt == 1)
-            {<div class="bg-danger">@Html.Raw(item.PostContent);</div>;
+            {<div class="bg-danger">@Html.Raw(item.PostContent)</div>;
                 bgAlt--;
-            } 
+                   } 
 
 
     }

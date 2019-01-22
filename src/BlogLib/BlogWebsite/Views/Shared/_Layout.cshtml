@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="https://cloud.tinymce.com/5-testing/tinymce.min.js"></script>
     <script>
-    tinymce.init({
+        tinymce.init({
             autoresize_min_height: 500,
             mode: "specific_textareas",
             editor_selector: "editorHtml",
@@ -100,61 +100,22 @@
                             <ul class="col ">
                                 <ul class="list-unstyled ">
                                     <@foreach (var item in Model)
-                                    {
-                                        int maxLeft = 8;
+                                    { int maxLeft = 8;
                                         if (maxLeft > 4)
                                         {<li> <a class="nav-link " href="# ">@Html.DisplayFor(modelItem => item.PostName)</a></li>
-
-                                           @
-                                    { maxLeft--;
-                                    }
-                                    if (maxLeft == 4)
-                                    {
-
-
-                            <ul class="col ">
-                                <ul class="list-unstyled ">
-                                    <li> <a class="nav-link " href="# ">@Html.DisplayFor(modelItem => item.PostName)</a></li>
-
-                                    maxLeft--;
-                                    }
-                                </ul>
-                            </ul>}
-                        maxLeft--;}
-                        if (maxLeft > 0)
-                        {
-                                      <@foreach (var item in Model)
-                                      { 
-                            <ul class="col ">
-                                <ul class="list-unstyled ">
-                                    <li> <a class="nav-link " href="# ">@Html.DisplayFor(modelItem => item.PostName)</a></li>
-
-                                    maxLeft--;
-                                    }
-                                </ul>
-                            </ul>}
-                                        if (maxLeft == 0)
-                                        {
-                                            </ul> </ul>
+                                           maxLeft--;
+                                        }
+                                        else{
+                                            return;
                                         }
                                     }
-                         
-                        <ul class="col ">
-                            <ul class="list-unstyled ">
-
-                                }
-                                else
-                                {
-                                return;
-                                }
-                                }
 
 
                                 <div class="col ">
                                     <ul class="list-unstyled "></ul>
                                 </div>
-                        </div>
-                            <div class="col ">
+
+                            @*<div class="col ">
                                 <ul class="list-unstyled ">
                                     <@foreach (var item in Model)
                                     {
@@ -169,24 +130,24 @@
                                             return;
                                         }
                                     }
-                                    </div>
+                                    </div>*@
 
                             <div class="col ">
                                 <ul class="list-unstyled "></ul>
                             </div>
-                            </div>
-
-                            @*  <div class="form-group ">
-        <label for="select-country ">Select Your Region</label>
-        <select class="form-control " id="select-country ">
-            <option>UK</option>
-            <option>USA</option>
-            <option>Brazil</option>
-            <option>South Africa</option>
-        </select>
-                            *@
                         </div>
-       
+
+                        @*  <div class="form-group ">
+                            <label for="select-country ">Select Your Region</label>
+                            <select class="form-control " id="select-country ">
+                                <option>UK</option>
+                                <option>USA</option>
+                                <option>Brazil</option>
+                                <option>South Africa</option>
+                            </select>
+                        *@
+                    </div>
+
 
 
                     <div class="col ">
@@ -250,12 +211,11 @@
                         </ul>
                     </div>
                 </div>
-                        </div>
-                        <div class="col-1 ">
-                        </div>
-                    </div>
-                </div>
-         
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        </div>
+
 
 
     </header>
