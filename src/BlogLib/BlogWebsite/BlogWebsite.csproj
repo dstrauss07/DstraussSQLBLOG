@@ -18,4 +18,9 @@
     <ProjectReference Include="..\BlogLib\BlogLib.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Views\DisplayTemplates\" />
+  </ItemGroup>
+
 </Project>

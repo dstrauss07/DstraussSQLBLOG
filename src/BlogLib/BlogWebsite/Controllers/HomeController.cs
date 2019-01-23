@@ -17,10 +17,17 @@ namespace BlogWebsite.Controllers
             _postRepo = postRepository;
         }
 
+        
         public IActionResult Index()
         {
 
             return View(_postRepo.SortByDate());
+        }
+
+        public ActionResult Details(int id)
+        {
+            
+            return View(_postRepo.GetByID(id));
         }
 
         public IActionResult Privacy()
