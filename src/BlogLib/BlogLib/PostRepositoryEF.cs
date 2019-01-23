@@ -23,6 +23,12 @@ namespace StraussDA.BlogLib
             return _postContext.Post.ToList();
         }
 
+        public List<Post> SortByDate()
+        {
+            
+            return _postContext.Post.OrderByDescending(e => e.ModifyDate).ToList();
+        }
+
         public Post GetByID(int id)
         {
              return _postContext.Post

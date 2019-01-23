@@ -19,8 +19,8 @@ namespace BlogWebsite.Controllers
 
         public IActionResult Index()
         {
-            
-            return View(_postRepo.ListAll());
+
+            return View(_postRepo.SortByDate());
         }
 
         public IActionResult Privacy()

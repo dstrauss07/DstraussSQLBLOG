@@ -9,21 +9,22 @@
     </aside>
     <main class="col-md-8 col-lg-9 p-5" id="article-area">
        
-        @foreach (var item in Model)
-                    {
-                        int bgAlt = 0;
-                        if (bgAlt == 0)
-                        {
+        @{ int bgAlt = 0;
+            foreach (var item in Model)
+            {
+                if (bgAlt == 0)
+                {
                 <div class="bg-success">@Html.Raw(item.PostContent)</div>;
-                bgAlt++;
-               }
-            if (bgAlt == 1)
-            {<div class="bg-danger">@Html.Raw(item.PostContent)</div>;
-                bgAlt--;
-                   } 
-
-
-    }
+                    bgAlt++;
+                    continue;
+                }
+                if (bgAlt == 1)
+                {<div class="bg-danger">@Html.Raw(item.PostContent)</div>;
+                        bgAlt--;
+                        continue;
+                    }
+                }
+            }
 
     </main>
 </div>

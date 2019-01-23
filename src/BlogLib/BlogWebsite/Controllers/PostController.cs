@@ -20,7 +20,7 @@ namespace BlogWebsite.Controllers
         public ActionResult Index()
         {
 
-            return View(_postRepo.ListAll());
+            return View(_postRepo.SortByDate());
         }
 
         // GET: Post/Details/5

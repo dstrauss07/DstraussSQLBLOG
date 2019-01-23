@@ -50,6 +50,9 @@ namespace StraussDA.BlogLib
             _posts.Remove(GetByID(id));
         }
 
-      
+        public List<Post> SortByDate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
