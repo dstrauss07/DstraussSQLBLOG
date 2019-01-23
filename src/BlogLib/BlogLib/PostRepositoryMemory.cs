@@ -37,6 +37,7 @@ namespace StraussDA.BlogLib
             OrigPost.ModifyDate = editedPost.ModifyDate;
             OrigPost.PostName = editedPost.PostName;
             OrigPost.PostTags = editedPost.PostTags;
+            OrigPost.PostCategory = editedPost.PostCategory;
         }
 
         public void NewPost(Post NewPost)

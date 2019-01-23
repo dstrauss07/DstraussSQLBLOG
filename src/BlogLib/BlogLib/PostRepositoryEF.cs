@@ -43,6 +43,7 @@ namespace StraussDA.BlogLib
             OrigPost.ModifyDate = DateTime.Now;
             OrigPost.PostName = editedPost.PostName;
             OrigPost.PostTags = editedPost.PostTags;
+            OrigPost.PostCategory = editedPost.PostCategory;
             _postContext.SaveChanges();
         }
 
