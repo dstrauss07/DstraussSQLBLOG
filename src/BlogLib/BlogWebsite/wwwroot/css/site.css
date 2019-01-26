@@ -69,3 +69,18 @@ body {
     background-color:red;
     margin: 2.5rem 0;
 }
+
+. <!-- Coding Projects Menu-- >
+/* navbar */
+.navbar-default {
+    background-color: #CCFFEE;
+    border-color: #E7E7E7;
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+
+.navbar-toggler-icon{
+    color:black;
+}
