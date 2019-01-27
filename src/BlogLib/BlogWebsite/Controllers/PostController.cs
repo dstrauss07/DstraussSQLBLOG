@@ -4,7 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using BlogWebsite.Models;
 using StraussDA.BlogLib;
+using Microsoft.AspNetCore.Authorization;
+
 
 
 namespace BlogWebsite.Controllers
@@ -13,17 +16,28 @@ namespace BlogWebsite.Controllers
     {
         private readonly IPostRepository _postRepo;
 
+       
+
         public PostController(IPostRepository postRepository)
         {
             _postRepo = postRepository;
         }
-        public ActionResult Index()
+
+        [Authorize]
+        public IActionResult Index()
         {
+
+            //PostListViewModel viewModel = new PostListViewModel
+            //{
+            //    Posts = _postRepo.SortByDate()
+
+            //};
 
             return View(_postRepo.SortByDate());
         }
 
         // GET: Post/Details/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Details(int id)
         {
 

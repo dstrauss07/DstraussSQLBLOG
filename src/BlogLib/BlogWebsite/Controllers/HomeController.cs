@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BlogWebsite.Models;
 using StraussDA.BlogLib;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BlogWebsite.Controllers
 {
@@ -20,10 +21,16 @@ namespace BlogWebsite.Controllers
         
         public IActionResult Index()
         {
+            //PostListViewModel viewModel = new PostListViewModel
+            //{
+            //    Posts = _postRepo.SortByDate()
+
+            //};
 
             return View(_postRepo.SortByDate());
         }
-
+        
+       [Authorize(Roles ="Administrator")]
         public ActionResult Details(int id)
         {
             
