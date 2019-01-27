@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using BlogWebsite.Models;
 using BlogWebsite.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace BlogWebsite.Data
 {

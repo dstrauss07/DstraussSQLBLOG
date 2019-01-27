@@ -37,7 +37,7 @@ namespace BlogWebsite.Controllers
         }
 
         // GET: Post/Details/5
-        [Authorize(Roles = "Administrator")]
+        
         public ActionResult Details(int id)
         {
 
@@ -53,6 +53,7 @@ namespace BlogWebsite.Controllers
         // POST: Post/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create(Post NewPost, IFormCollection collection)
         {
             try
@@ -81,6 +82,7 @@ namespace BlogWebsite.Controllers
         // POST: Post/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(Post editedPost, IFormCollection collection)
         {
             if(!ModelState.IsValid)
@@ -109,6 +111,7 @@ namespace BlogWebsite.Controllers
         // POST: Post/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int id, IFormCollection collection)
         {
             try
