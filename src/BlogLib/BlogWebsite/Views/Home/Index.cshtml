@@ -5,22 +5,22 @@
 @Html.Partial("../Shared/_SubMenu")
 
 <div class="row">
-    <aside class="col-md-4 col-lg-3 p-3 text-center">
+    <aside class="col-md-2 col-lg-2 p-1 text-center">
         <img class="img-fluid mx-auto" src="image/dave.jpg">
     </aside>
-    <main class="col-md-8 col-lg-9 p-5" id="article-area">
+    <main class="col-md-10 col-lg-10 p-1" id="article-area">
 
         @{ int bgAlt = 0;
             foreach (var item in Model)
             {
                 if (bgAlt == 0)
                 {
-                    <div class="bg-success">@Html.Raw(item.PostContent)</div>;
+                    <div class="bg-lightgreen pl-4 pr-4 pt-1 pb-1 mb-1 article-content">@Html.Raw(item.PostContent)</div>;
                     bgAlt++;
                     continue;
                 }
                 if (bgAlt == 1)
-                {<div class="bg-danger">@Html.Raw(item.PostContent)</div>;
+                {<div class="bg-lightcoral pl-4 pr-4 pt-1 pb-1 mb-1 article-content">@Html.Raw(item.PostContent)</div>;
                 bgAlt--;
                 continue;
             }

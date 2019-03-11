@@ -16,6 +16,7 @@
               integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://cloud.tinymce.com/5-testing/tinymce.min.js"></script>
     <script>
         tinymce.init({
@@ -28,7 +29,7 @@
 </head>
 <body>
    <div class="container">
-        <partial name="_CookieConsentPartial" />
+        <!--<partial name="_CookieConsentPartial" /> -->
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -36,7 +37,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - Dave Strauss - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2019 - David Strauss - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
 
