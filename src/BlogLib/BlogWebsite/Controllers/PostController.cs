@@ -23,7 +23,6 @@ namespace BlogWebsite.Controllers
             _postRepo = postRepository;
         }
 
-        [Authorize]
         public IActionResult Index()
         {
 
