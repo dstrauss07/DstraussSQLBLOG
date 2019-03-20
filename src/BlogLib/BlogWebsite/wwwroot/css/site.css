@@ -1,6 +1,6 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-@import url('https://fonts.googleapis.com/css?family=Carter+One|Fredoka+One|Raleway|Markazi+Text');
+@import url('https://fonts.googleapis.com/css?family=Carter+One|Fredoka+One|Raleway|ZCOOL+XiaoWei');
 
 
 /* Sticky footer styles
@@ -146,9 +146,8 @@ a.dropdown-item {
     background-color: #ff9393;
 }
 
-.article-content p
-{
-    font-family: 'Markazi Text', serif;
+.article-content p {
+    font-family: 'ZCOOL XiaoWei', serif;
 }
 .article-content h1, h2, h3, h4, h5 {
     font-family: 'Carter One', cursive;

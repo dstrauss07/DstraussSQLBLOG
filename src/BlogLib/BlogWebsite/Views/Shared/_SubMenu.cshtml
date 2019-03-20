@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<StraussDA.BlogLib.Post>
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
 <!-- Main Navbar Menu-->
 <header>
     <nav class="navbar navbar-default navbar-expand-lg navbar-toggleable-sm border-bottom mb-0 bg-navbar">
@@ -22,19 +25,26 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">
-                            Coding Projects
+                            <span data-toggle="tooltip" title="Links To Various Web App and Game Projects">
+                                Coding Projects
+                            </span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" data-toggle="tooltip" title="Mobile Game Protype created for ShipWright Studios with Unity and C#" target="_blank" href="https://drive.google.com/file/d/1eioSRD7GqgLhcrYermW_K53RUU4CMydD/view?usp=sharing">Mobile Game Prototype</a>
-                            <a class="dropdown-item" data-toggle="tooltip" title="RPG NodeJS Express Web Application" target="_blank" href="https://thehydranodejs.azurewebsites.net">NodeJS RPG Game</a>
-                            <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Responsive Webpage HTML5 & CSS Flex-Box" href="https://github.com/dstrauss07/responsiveactingwebsite">Responsive Acting Website</a>
+                            <a class="dropdown-item" data-toggle="tooltip" title="Mobile Game Protype created for ShipWright Studios with Unity and C#" target="_blank" href="https://developer.cloud.unity3d.com/share/share.html?shareId=-J02g7LXOV">Mobile Game Prototype</a>
+                            <a class="dropdown-item" data-toggle="tooltip" title="RPG NodeJS Express Web Application and Bootstrap" target="_blank" href="https://thehydranodejs.azurewebsites.net">NodeJS RPG Game</a>
                             <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="48 Hour C# & Unity Game Project" href="https://ldjam.com/events/ludum-dare/43/dont-panic">GameJam-Game</a>
+                            <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Responsive Webpage HTML5 & CSS Flex-Box, no Bootstrap" href="https://sandrapattonacting.azurewebsites.net/">Responsive Acting Website</a>
+                            <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Early FrontEnd Project, a Nasty little rabbit with BIIIG teeth" href="https://killerrabbitjsgame.azurewebsites.net/">Killer Rabbit JS Game</a>
+
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">
-                            GitHub
+                            <span  data-toggle="tooltip" title="Source Code for Several Projects">
+                                GitHub
+                            </span>
+                           
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Find Me On Github!" href="https://github.com/dstrauss07">Github Profile</a>
@@ -53,9 +63,13 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" target="_blank" href="~/docs/DavidStraussCodingResume.pdf">Download Resume</a>
-                            <a class="dropdown-item disabled" href="#">Send Email</a>
+                            <a class="dropdown-item" href="mailto:fmdenver@gmail.com">Send Email</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item " target="_blank" href="https://www.linkedin.com/in/dave-strauss-Atlanta">LinkedIn</a>
+                            <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Find Me On Github!" href="https://github.com/dstrauss07">Github Profile</a>
+                            <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Find Me On visual Team Studio!" href="https://davestrauss07.visualstudio.com">Visual Studio Profile</a>
+
+
                         </div>
                     <li class="nav-item">
                         <a class="nav-link text-nav-red" asp-area="" asp-controller="Post" asp-action="Index">Post</a>
