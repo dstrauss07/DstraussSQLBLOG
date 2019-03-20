@@ -14,6 +14,7 @@ html {
   }
 }
 
+
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
@@ -146,9 +147,11 @@ a.dropdown-item {
     background-color: #ff9393;
 }
 
-.article-content p {
+.article-content p, span {
     font-family: 'ZCOOL XiaoWei', serif;
 }
+
+
 .article-content h1, h2, h3, h4, h5 {
     font-family: 'Carter One', cursive;
 }
