@@ -21,9 +21,13 @@
     <script>
         tinymce.init({
             autoresize_min_height: 500,
+            autoresize_min_width: 500,
             mode: "specific_textareas",
             editor_selector: "editorHtml",
-            plugins: "autoresize",
+            plugins: "autoresize image autolink imagetools",
+            autosave_interval: "60s",
+            browser_spellcheck: true,
+            menubar: "file edit insert view format table tools help",
   
         });</script>
 </head>
