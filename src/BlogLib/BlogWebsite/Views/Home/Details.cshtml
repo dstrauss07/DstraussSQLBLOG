@@ -1,56 +1,30 @@
 ﻿@model StraussDA.BlogLib.Post
 
+@Html.Partial("../Shared/_SubMenuNoArticles")
 <div class="container">
+
     <partial name="_CookieConsentPartial" />
-    <main role="main" class="pb-3">
-
+    <main role="main" class="p-3 bg-lightcoral">
+        <div class="row justify-content-end">
+            <div>
+                <btn class="btn btn-info"> <a asp-action="Index" class="text-white">Back to Home Page</a></btn>
+            </div>
+        </div>
         <div>
-            <h4>Post</h4>
-            <hr />
-            <dl class="row">
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.Id)
-                </dt>
+            <dl class="row justify-content-center">
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Id)
+                    @Html.Raw(Model.PostContent)
                 </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.PostName)
-                </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.PostName)
+                    Posted:   <b>@Html.DisplayFor(model => model.PostDate)</b>
                 </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.PostDate)
-                </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.PostDate)
-                </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.ModifyDate)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.ModifyDate)
-                </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.PostContent)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.Raw(Model.PostContent);
-
-
-
-                </dd>
-
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.PostTags)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.PostTags)
+                    Modified:  <b> @Html.DisplayFor(model => model.ModifyDate)</b>
                 </dd>
             </dl>
         </div>
-        <div>
-            @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
-            <a asp-action="Index">Back to List</a>
+        <div class="row justify-content-end">
+            <div>
+                <btn class="btn btn-info"> <a asp-action="Index" class="text-white">Back to Home Page</a></btn>
+            </div>
         </div>

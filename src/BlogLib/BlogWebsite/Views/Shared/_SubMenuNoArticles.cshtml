@@ -1,0 +1,70 @@
+﻿<nav class="navbar navbar-default navbar-expand-lg navbar-toggleable-sm border-bottom mb-0 bg-navbar">
+    <div class="container">
+        <a class="navbar-brand-white" asp-area="" asp-controller="Home" asp-action="Index">David Strauss</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <partial name="_LoginPartial" />
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span data-toggle="tooltip" title="Links To Various Web App and Game Projects">
+                            Coding Projects
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" data-toggle="tooltip" title="Dotnet Core MVC App with API controllers" target="_blank" href="http://petpersonalityquiz.azurewebsites.net/">Pet API Quiz</a>
+                        <a class="dropdown-item" data-toggle="tooltip" title="Mobile Game Protype created for ShipWright Studios with Unity and C#" target="_blank" href="https://developer.cloud.unity3d.com/share/share.html?shareId=-J02g7LXOV">Mobile Game Prototype</a>
+                        <a class="dropdown-item" data-toggle="tooltip" title="RPG NodeJS Express Web Application and Bootstrap" target="_blank" href="https://thehydranodejs.azurewebsites.net">NodeJS RPG Game</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="48 Hour C# & Unity Game Project" href="https://ldjam.com/events/ludum-dare/43/dont-panic">GameJam-Game</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Responsive Webpage HTML5 & CSS Flex-Box, no Bootstrap" href="https://sandrapattonacting.azurewebsites.net/">Responsive Acting Website</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Early FrontEnd Project, a Nasty little rabbit with BIIIG teeth" href="https://killerrabbitjsgame.azurewebsites.net/">Killer Rabbit JS Game</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span data-toggle="tooltip" title="Source Code for Several Projects">
+                            Repos
+                        </span>
+
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Find Me On Github!" href="https://github.com/dstrauss07">Github Profile</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Find Me On Azure DevOps!" href="https://davestrauss07.visualstudio.com/">Azure DevOps Profile</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Dotnet Core MVC App with API controllers" href="https://davestrauss07.visualstudio.com/PersonalityQuizApi">Pet API Quiz</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Repo for this blog, created with ASP.net Core and Entity Framework with SQL backend" href="https://github.com/dstrauss07/DstraussSQLBLOG">SQL Blog</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Mobile Game Protype created for ShipWright Studios with Unity and C#" href="https://github.com/dstrauss07/shipWright2">Mobile Game Prototype</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Repo for RPG NodeJS Express Web Application" href="https://github.com/dstrauss07/filesystemRPG">NodeJS RPG Repo</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Repo for Responsive Webpage HTML5 & CSS Flex-Box" href="https://github.com/dstrauss07/responsiveactingwebsite">Responsive Acting Website</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Repo for 48 Hour C# & Unity Game Project" href="https://github.com/mbstraus/LudumDare43">GameJam-Game</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        Contact
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" target="_blank" href="~/docs/DavidStraussCodingResume.pdf">Download Resume</a>
+                        <a class="dropdown-item" href="mailto:fmdenver@gmail.com">Send Email</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item " target="_blank" href="https://www.linkedin.com/in/dave-strauss-Atlanta">LinkedIn Profile</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Find Me On Github!" href="https://github.com/dstrauss07">Github Profile</a>
+                        <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Find Me Azure DevOps" href="https://davestrauss07.visualstudio.com">Azure DevOps Profile</a>
+
+
+                    </div>
+                <li class="nav-item">
+                    <a class="nav-link text-nav-red" asp-area="" asp-controller="Post" asp-action="Index">Post</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

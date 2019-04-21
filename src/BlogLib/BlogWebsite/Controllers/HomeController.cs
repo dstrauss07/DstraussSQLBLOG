@@ -30,7 +30,6 @@ namespace BlogWebsite.Controllers
             return View(_postRepo.SortByDate());
         }
         
-       [Authorize(Roles ="Administrator")]
         public ActionResult Details(int id)
         {
             
