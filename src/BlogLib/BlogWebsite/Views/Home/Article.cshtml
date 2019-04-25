@@ -1,0 +1,30 @@
+﻿@model StraussDA.BlogLib.Post
+
+@Html.Partial("../Shared/_SubMenuNoArticles")
+<div class="container">
+
+    <partial name="_CookieConsentPartial" />
+    <main role="main" class="p-3 bg-lightcoral">
+        <div class="row justify-content-end">
+            <div>
+                <btn class="btn btn-info"> <a asp-action="Index" class="text-white">Back to Home Page</a></btn>
+            </div>
+        </div>
+        <div>
+            <dl class="row justify-content-center">
+                <dd class="col-sm-10">
+                    @Html.Raw(Model.PostContent)
+                </dd>
+                <dd class="col-sm-10">
+                    Posted:   <b>@Html.DisplayFor(model => model.PostDate)</b>
+                </dd>
+                <dd class="col-sm-10">
+                    Modified:  <b> @Html.DisplayFor(model => model.ModifyDate)</b>
+                </dd>
+            </dl>
+        </div>
+        <div class="row justify-content-end">
+            <div>
+                <btn class="btn btn-info"> <a asp-action="Index" class="text-white">Back to Home Page</a></btn>
+            </div>
+        </div>

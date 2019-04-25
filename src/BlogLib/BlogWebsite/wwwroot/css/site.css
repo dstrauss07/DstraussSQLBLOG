@@ -126,7 +126,7 @@ a.dropdown-item {
 
 .article_Link {
     color: black;
-    padding-left: 20%;
+    padding-left:5%;
 }
 
     .article_Link:hover {
@@ -169,3 +169,8 @@ a.dropdown-item {
         background-color: red;
         text-decoration: none;
     }
+
+.dropdown-article{
+    padding-left:0;
+    margin-left:0;
+}

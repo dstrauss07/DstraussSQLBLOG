@@ -13,5 +13,6 @@ namespace StraussDA.BlogLib
         public string PostContent { get; set; }
         public string PostTags { get; set; }
         public string PostCategory { get; set; }
+        public string PostUrl { get; set; }
     }
 }

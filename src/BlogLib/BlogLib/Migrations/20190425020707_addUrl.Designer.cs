@@ -10,8 +10,8 @@ using StraussDA.BlogLib;
 namespace StraussDA.BlogLib.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20190126231152_intialcommit")]
-    partial class intialcommit
+    [Migration("20190425020707_addUrl")]
+    partial class addUrl
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,6 +38,8 @@ namespace StraussDA.BlogLib.Migrations
                     b.Property<string>("PostName");
 
                     b.Property<string>("PostTags");
+
+                    b.Property<string>("PostUrl");
 
                     b.HasKey("Id");
 

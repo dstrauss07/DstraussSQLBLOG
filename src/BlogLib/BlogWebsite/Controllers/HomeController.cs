@@ -21,15 +21,14 @@ namespace BlogWebsite.Controllers
         
         public IActionResult Index()
         {
-            //PostListViewModel viewModel = new PostListViewModel
-            //{
-            //    Posts = _postRepo.SortByDate()
-
-            //};
-
             return View(_postRepo.SortByDate());
         }
-        
+
+        public IActionResult Article(string url)
+        {
+            return View(_postRepo.GetByUrl(url));
+        }
+
         public ActionResult Details(int id)
         {
             

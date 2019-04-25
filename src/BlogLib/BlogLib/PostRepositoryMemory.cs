@@ -55,5 +55,10 @@ namespace StraussDA.BlogLib
         {
             throw new NotImplementedException();
         }
+
+        public Post GetByUrl(string url)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

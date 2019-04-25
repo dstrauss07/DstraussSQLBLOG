@@ -37,6 +37,8 @@ namespace StraussDA.BlogLib.Migrations
 
                     b.Property<string>("PostTags");
 
+                    b.Property<string>("PostUrl");
+
                     b.HasKey("Id");
 
                     b.ToTable("Post");

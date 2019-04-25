@@ -36,12 +36,20 @@ namespace StraussDA.BlogLib
             
         }
 
+        public Post GetByUrl(string url)
+        {
+            return _postContext.Post
+              .Single(b => b.PostUrl == url);
+        }
+
+
         public void EditPost(Post editedPost)
         {
             var OrigPost = GetByID(editedPost.Id);
             OrigPost.PostContent = editedPost.PostContent;
             OrigPost.ModifyDate = DateTime.Now;
             OrigPost.PostName = editedPost.PostName;
+            OrigPost.PostUrl = editedPost.PostUrl;
             OrigPost.PostTags = editedPost.PostTags;
             OrigPost.PostCategory = editedPost.PostCategory;
             _postContext.SaveChanges();
@@ -62,6 +70,5 @@ namespace StraussDA.BlogLib
             _postContext.SaveChanges();
         }
 
-      
     }
 }

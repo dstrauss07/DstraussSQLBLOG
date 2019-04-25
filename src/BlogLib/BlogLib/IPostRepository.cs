@@ -9,6 +9,7 @@ namespace StraussDA.BlogLib
         List<Post> ListAll();
         List<Post> SortByDate();
         Post GetByID(int id);
+        Post GetByUrl(string url);
         void EditPost(Post editedPost);
         void NewPost(Post NewPost);
         void DeletePost(int id);

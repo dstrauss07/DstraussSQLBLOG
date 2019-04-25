@@ -1,7 +1,6 @@
 ﻿@model IEnumerable<StraussDA.BlogLib.Post>
 @using Microsoft.AspNetCore.Authorization
 @inject IAuthorizationService AuthorizationService
-
 <!-- Main Navbar Menu-->
 <header>
     <nav class="navbar navbar-default navbar-expand-lg navbar-toggleable-sm border-bottom mb-0 bg-navbar">
@@ -42,10 +41,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">
-                            <span  data-toggle="tooltip" title="Source Code for Several Projects">
+                            <span data-toggle="tooltip" title="Source Code for Several Projects">
                                 Repos
                             </span>
-                           
+
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" target="_blank" data-toggle="tooltip" title="Find Me On Github!" href="https://github.com/dstrauss07">Github Profile</a>
@@ -97,7 +96,7 @@
                             int maxLeft = 5;
                             if (maxLeft > 0)
                             {
-                                <li> @Html.ActionLink(item.PostName, "Details", new { id = item.Id }, new { @class = "article_Link" })</li>
+                                <li class="dropdown-article"> @Html.ActionLink(item.PostName, "Article", new { url = item.PostUrl }, new { @class = "article_Link" })</li>
                                 @*<a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index"> @Html.DisplayFor(modelItem => item.PostName) @*/Modified: @Html.DisplayFor(modelItem => item.ModifyDate)*@
 
                                 maxLeft--;
@@ -125,7 +124,7 @@
                             int maxLeft = 5;
                             if (maxLeft > 0)
                             {
-                                <li> @Html.ActionLink(item.PostName, "Details", new { id = item.Id }, new { @class = "article_Link" })</li>
+                                <li class="dropdown-article"> @Html.ActionLink(item.PostName, "Article", new { url = item.PostUrl }, new { @class = "article_Link" })</li>
                                 @*<a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index"> @Html.DisplayFor(modelItem => item.PostName) @*/Modified: @Html.DisplayFor(modelItem => item.ModifyDate)*@
 
                                 maxLeft--;
@@ -146,7 +145,7 @@
                             int maxLeft = 5;
                             if (maxLeft > 0)
                             {
-                                <li> @Html.ActionLink(item.PostName, "Details", new { id = item.Id }, new { @class = "article_Link" })</li>
+                                <li class="dropdown-article"> @Html.ActionLink(item.PostName, "Article", new { url = item.PostUrl }, new { @class = "article_Link" })</li>
                                 @*<a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index"> @Html.DisplayFor(modelItem => item.PostName) @*/Modified: @Html.DisplayFor(modelItem => item.ModifyDate)*@
 
                                 maxLeft--;
@@ -167,9 +166,7 @@
                             int maxLeft = 5;
                             if (maxLeft > 0)
                             {
-                                <li class="article_li"> @Html.ActionLink(item.PostName, "Details", new { id = item.Id }, new { @class = "article_Link" })</li>
-                                @*<a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index"> @Html.DisplayFor(modelItem => item.PostName) @*/Modified: @Html.DisplayFor(modelItem => item.ModifyDate)*@
-
+                                <li> @Html.ActionLink(item.PostName, "Article", new { url = item.PostUrl }, new { @class = "article_Link" })</li>
                                 maxLeft--;
                             }
                             else
