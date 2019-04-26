@@ -150,6 +150,14 @@ a.dropdown-item {
     background-color: #ff9393;
 }
 
+.article-content{
+word-wrap: break-word;
+}
+
+.article-content img{
+max-width:100%;
+}
+
 .article-content p, span {
     font-family: 'ZCOOL XiaoWei', serif;
 }
