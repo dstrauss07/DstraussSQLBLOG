@@ -174,3 +174,9 @@ a.dropdown-item {
     padding-left:0;
     margin-left:0;
 }
+
+.caption{
+    text-align:center;
+    color:red;
+    font-size: 1rem;
+}
