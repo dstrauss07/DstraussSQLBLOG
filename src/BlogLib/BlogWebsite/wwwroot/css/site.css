@@ -160,6 +160,7 @@ max-width:100%;
 
 .article-content p, span {
     font-family: 'ZCOOL XiaoWei', serif;
+    word-wrap: break-word;
 }
 
 
