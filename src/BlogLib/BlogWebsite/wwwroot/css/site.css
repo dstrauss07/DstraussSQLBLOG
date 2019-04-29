@@ -15,6 +15,10 @@ html {
     }
 }
 
+img{
+    max-width:100%;
+}
+
 
 .border-top {
     border-top: 1px solid #e5e5e5;
@@ -146,6 +150,14 @@ a.dropdown-item {
     background-color: #ff9393;
 }
 
+.article-content{
+word-wrap: break-word;
+}
+
+.article-content img{
+max-width:100%;
+}
+
 .article-content p, span {
     font-family: 'ZCOOL XiaoWei', serif;
 }
@@ -173,10 +185,4 @@ a.dropdown-item {
 .dropdown-article{
     padding-left:0;
     margin-left:0;
-}
-
-.caption{
-    text-align:center;
-    color:red;
-    font-size: 1rem;
 }
